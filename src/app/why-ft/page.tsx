@@ -20,8 +20,19 @@ function FTComponent() {
 
   return (
     <>
-      <div className="wrapper">
-        <Carousel Images={["https://mcco02mstrub73kprod.dxcloud.episerver.net/globalassets/fosterthrive_aiden_bubbles_081-whyft_v1.png", "https://mcco02mstrub73kprod.dxcloud.episerver.net/globalassets/fosterthrive_aiden_bubbles_081-whyft_v1.png", "https://mcco02mstrub73kprod.dxcloud.episerver.net/globalassets/fosterthrive_aiden_bubbles_081-whyft_v1.png"]} />
+      <div className="pt-10">
+        <Carousel Images={[{
+          url: "https://mcco02mstrub73kprod.dxcloud.episerver.net/globalassets/fosterthrive_aiden_bubbles_081-whyft_v1.png", 
+          title: "Foster & Thrive",
+          backgrounColor: undefined,
+          description: "With you for Life"
+        },
+        {
+          url: "https://mcco02mstrub73kprod.dxcloud.episerver.net/globalassets/fosterthrive_aiden_bubbles_081-whyft_v1.png", 
+          title: "Foster & Thrive",
+          backgrounColor: undefined,
+          description: "With you for Life"
+        }]} />
       </div>
     </>
   );
