@@ -1,8 +1,26 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Footer from "@/components/ui/footer";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const footerData = {
+  MenuItems: [
+      { Name: 'Contact Us', Url: 'https://www.fosterandthrive.com/contact-us' },
+      { Name: 'FAQ', Url: 'https://www.fosterandthrive.com/faq' },
+  ],
+  SocialMediaItems: [
+      { Name: 'Facebook', Url: 'https://facebook.com', ImageUrl: 'https://mcco02mstrub73kprod.dxcloud.episerver.net/contentassets/a9d15d89910a4fbaa186989d12377e4f/social-medianormal-property-2instagram.svg' },
+      { Name: 'Instagram', Url: 'https://instagram.com', ImageUrl: 'https://mcco02mstrub73kprod.dxcloud.episerver.net/contentassets/a9d15d89910a4fbaa186989d12377e4f/social-medianormal-property-2instagram.svg' },
+      { Name: 'YouTube', Url: 'https://youtube.com', ImageUrl: 'https://mcco02mstrub73kprod.dxcloud.episerver.net/globalassets/youtube.png' }
+  ],
+  PageInfo: [
+      { Name: 'Privacy Notice', Url: 'https://www.fosterandthrive.com/privacy-notice' },
+      { Name: 'Terms of Use', Url: 'https://www.fosterandthrive.com/terms-of-use' },
+      { Name: 'Cookie Settings', Url: '/' },
+      { Name: 'Do Not Sell My Information', Url: 'https://privacyportal.onetrust.com/webform/599133ba-bafa-4e24-8173-6e59b6c96dab/1554ac76-9012-4a4d-8cd4-53776f517530' }
+  ]
+};
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +34,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Footer {...footerData} />
+      </body>
+      
     </html>
   );
 }
